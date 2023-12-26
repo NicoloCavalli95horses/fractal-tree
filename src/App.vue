@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Node :scale="scale" :max_levels="9" :size="800" />
+    <Node :style="{ 'transform' : `scale(${scale})` }" :max_levels="7" :size_px="700" />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ import Node from './components/Node.vue';
 
 
 const INCREMENT = 0.05;
-const scale = ref( 0.65 );
+const scale = ref( -0.65 );
 
 //======================
 // Function
@@ -46,8 +46,6 @@ onUnmounted(() => {
 .main {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  overflow: hidden;
 }
 
 </style>
